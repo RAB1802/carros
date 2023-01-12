@@ -1,0 +1,83 @@
+import java.util.*;
+
+public class ControleFrutas {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		ArrayList<String> frutas = new ArrayList();
+
+		frutas.add("Uva");
+		frutas.add("Laranja");
+		frutas.add("Banana");
+		frutas.add("Maçã");
+		frutas.add("Abacaxi");
+
+		for (int contador = 0; contador < frutas.size(); contador++) {
+			System.out.println(frutas.get(contador));
+		}
+
+		System.out.println("Qual fruta deseja remover? \n1-Uva \n2-Laranja \n3-Banana \n4-Maçã \n5-Abacaxi");
+		int remover = scan.nextInt();
+		switch (remover) {
+		case 1:
+			System.out.println(frutas.remove(0));
+			break;
+		case 2:
+			System.out.println(frutas.remove(1));
+			break;
+		case 3:
+			System.out.println(frutas.remove(2));
+			break;
+		case 4:
+			System.out.println(frutas.remove(3));
+			break;
+		case 5:
+			System.out.println(frutas.remove(4));
+			break;
+		}
+
+		for (int contador = 0; contador < frutas.size(); contador++) {
+			System.out.println(frutas.get(contador));
+		}
+
+		System.out.println("Deseja modificar alguma fruta?");
+		String modificar = scan.nextLine();
+
+		switch (modificar) {
+		case "1":
+			System.out.println("Qual fruta deseja colocar?");
+			modificar = scan.nextLine();
+			System.out.println(frutas.get(0));
+			break;
+		case "2":
+			System.out.println("Qual fruta deseja colocar?");
+			modificar = scan.nextLine();
+			System.out.println(frutas.get(1));
+			break;
+		case "3":
+			System.out.println("Qual fruta deseja colocar?");
+			modificar = scan.nextLine();
+			System.out.println(frutas.get(2));
+			break;
+		case "4":
+			System.out.println("Qual fruta deseja colocar?");
+			modificar = scan.nextLine();
+			System.out.println(frutas.get(3));
+			break;
+		case "5":
+			System.out.println("Qual fruta deseja colocar?");
+			modificar = scan.nextLine();
+			System.out.println(frutas.get(4));
+			break;
+		}
+
+		for (int contador = 0; contador < frutas.size(); contador++) {
+			System.out.println(frutas.get(contador));
+		}
+
+		scan.close();
+	}
+
+}
